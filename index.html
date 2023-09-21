@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Banking System</title>
+    <title>Bank Hapa</title>
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
-    <!-- Fonts -->
+    <!-- icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/media/exchange-funds-line.svg" type="image/x-icon">
+
+    <!-- fonts -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
@@ -23,9 +27,9 @@
   <!-- loader for splash screen -->
   <div id="loading"></div>
 
-    <!-- navbar starts here  -->
+    <!-- navbar  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="./index.html">World Bank</a>
+        <a class="navbar-brand" href="./index.html"><i class="ri-exchange-funds-line"></i> Bank Hapa</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,59 +37,48 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link active" href="./index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./customers.html">Customers</a>
+              <a class="nav-link" href="./customers.html">Transactions</a>
             </li>
           </ul>
         </div>
     </nav>
-    <!-- navbar ends here  -->
 
-    <!-- here content starts here -->
+    <!-- hero content -->
     <div class="container-fluid hero-content">
       <div class="row align-items-center">
         <div class="col-md-6 col-sm-12 text-center" data-aos="fade-up">
-          <h1>Money transaction</h1>
-          <p class="lead muted">Easy way to transfer money from any where</p>
-          <p>Welcome</p>
+          <h1>Transfer Money Easily</h1>
           <br>
-          <br>
+          <p class="lead muted">With Bank Hapa, send and receive money anywhere.</p>
+          <br><br>
           <a class="get-started" href="./customers.html">Get Started</a>
-        </div>
-        <div class="col-md-6 col-sm-12 text-center" data-aos="fade-left">
-          <div class="hero-img-div">
-            <img class="hero-img" src="assets/media/hero-img.svg" alt="img-showing-money-transfer">
-          </div>
         </div>
       </div>
     </div>
-    <!-- here content ends here -->
 
-
-
-
-    <!-- footer starts here -->
+    <!-- footer -->
     <footer>
       <hr>
       <div class="row text-center">
-        <div class="col-md-6">
-          <p>This project is made by Om #May2021 at GRIP.</p>
-          
-        </div>
+        
         <div class="col-md-6 text-center">
-            <ul class="social-icons">
-              Contact Me:
-              <li><a target="_blank" class="github" href="https://github.com/omk9420"><i class="fab fa-github fa-2x"></i></a></li>
-              
-              <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in/om-kumawat-0665691aa"><i class="fab fa-linkedin fa-2x"></i></a></li>   
-            </ul>
+          <ul class="social-icons">
+            <li><a target="_blank" class="github" href="https://github.com/NatashaMuhanji"><i class="fab fa-github fa-2x"></i></a></li>
+            <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in/muhanjinatasha/"><i class="fab fa-linkedin fa-2x"></i></a></li>
+            <li><a target="_blank" class="twitter" href="https://twitter.com/muhanjinatasha"><i class="fab fa-twitter fa-2x"></i></a></li>   
+          </ul>
+      </div>
+        <div class="col-md-6">
+          <p>© Copyrights <span id="year"></span> Muhanji. All rights reserved.</p>
         </div>
       </div>
     </footer>
-    <!-- footer ends here -->
 
+
+    <!-- JAVASCRIPT -->
     <!-- spalsh screen js -->
     <script>
       var preloader = document.getElementById("loading");
@@ -98,6 +91,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+
+    <!-- dynamic year js -->
+    <script>
+      year=document.querySelector("#year").innerHTML = new Date().getFullYear();
+    </script>
 
     <!-- aos data  -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
