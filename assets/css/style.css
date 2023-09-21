@@ -4,8 +4,10 @@ html{
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #6d597a;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    background-color: rgb(185, 204, 234);
+    color: rgb(12, 42, 89);
 }
 
 /* splash screen css starts here  */
@@ -13,69 +15,83 @@ body{
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #e4eff2 url("https://media.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif") no-repeat center center;
     z-index: 99999;
 }
-/* splash screen css ends here  */
 
 /* navbar css starts here  */
+.active{
+    text-decoration: underline;
+}
 .bg-light{
-    background-color: #f2e9e4!important;
+    background-color: rgb(185, 204, 234) !important;
+}
+nav.navbar{
+    padding: 1.5rem;
 }
 
 .navbar-brand{
-    font-family: 'Sansita Swashed', cursive;
-    font-size: 1.5rem;
-    color: #5f6368!important;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: rgb(12, 42, 89) !important;
 }
 
 .nav-link{
-    color: #5f6368!important;
+    color: rgb(12, 42, 89) !important;
     font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold !important;
+    font-size: large !important;
+    letter-spacing: 1px;
 }
 
 .nav-link:hover{
-    background-color: #f3f1f1;
+    opacity: .7;
 }
-/* navbar css ends here  */
 
 /* here content css starts here  */
 .hero-content{
-    height: 100vh;
-    background-color: #355070;
-    color: #ffffff;
-    padding: 3rem;
-    border-bottom-left-radius: 45rem;
-    border-bottom-right-radius: 45rem;
+    height: 80vh;
+    background: rgb(53, 80, 112) url("/assets/media/hero-img.jpg") no-repeat fixed;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    border-bottom-left-radius: 55rem;
+    border-bottom-right-radius: 55rem;
     margin-bottom: 1vh;
 }
 
-.hero-img{
-    height: 70vh;
-    width: 100%;
+.hero-content .align-items-center {
+    backdrop-filter: blur(5px);
+    padding: 5rem 1rem 13.7rem 1rem;
 }
 
-@media only screen and (max-width: 766px) {
-    .hero-img {
-      display: none;
-    }
+.text-center h1,
+.text-center p{
+    font-weight: 700;
+}
+
+.align-items-center{
+    padding-top: 5rem;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
 }
 
 .get-started{
     border-radius: 0.5rem;
+    margin-top: 1rem;
     padding: 1rem 2rem;
     font-size: 162%;
-    background-color: #fff;
-    color: #039be5!important;
+    background-color: rgb(185, 204, 234);
+    color: rgb(53, 80, 112) !important;
     transition: 0.3s;
 }
 
 .get-started:hover{
     text-decoration: none;
-    background-color: #bfdff0;
+    background-color: rgb(191, 223, 240);
+    box-shadow: 1px 1px 5px rgb(191, 223, 240);
     
 }
-/* here content css starts here  */
 
 /* get-started-buttons css starts here*/
 .get-started-content{
@@ -104,11 +120,10 @@ body{
     background-color: #017ab6;
     text-decoration: none;
 }
-/* get-started-buttons css end here*/
 
 /* footer css starts here */
 footer{
-    background-color:  #f2e9e4;
+    background-color:  rgb(185, 204, 234);
 }
 
 .social-icons li{
@@ -117,15 +132,94 @@ footer{
     padding: 0.5rem;
 }
 
-.github{
-    color: #24292e;
+.github,
+.linkedin,
+.twitter{
+    color: rgb(12, 42, 89);
+}
+.github:hover,
+.linkedin:hover{
+    color: rgb(53, 80, 112);
 }
 
-.linkedin{
-    color: #0077b5;
+/* customer page */
+.my-info{
+    padding: 4rem 1rem;
+    text-transform: uppercase;
+}
+.text-center h2,
+.text-center h4{
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 
-.google{
-    color: #D44638;
+.btn-info{
+    margin: 2rem;
+    padding: 1rem 1.2rem !important;
+    background-color: rgb(53, 80, 112)!important;
+    color: rgb(255, 255, 255)!important;
+    margin-left: 5px;
+    padding: 0.75rem;
+    transition: all 0.3s;
+    border: 2px solid transparent !important;
 }
-/* footer css ends here  */
+
+.btn-info:hover{
+    border: 2px solid rgb(185, 204, 234) !important;
+}
+
+table {
+    background-color:transparent !important;
+    margin-bottom: 4rem !important;
+    border-top: 1px solid rgb(12, 42, 89) !important;
+    border-bottom: 1px solid rgb(12, 42, 89) !important
+}
+tr th{
+    text-align: left !important;
+    padding: 1rem !important;
+    line-height: 3;
+    font-weight: 700 !important;
+    color: rgb(12, 42, 89) !important;
+    background-color: rgb(173, 193, 226);
+}
+footer{
+    margin: 1rem;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+    .my-info {
+        padding-bottom: 2rem;
+    }
+    .hero-content .align-items-center {
+        padding: 13.7rem 1rem 27rem 1rem;
+    }
+    .hero-content {
+        background: rgb(53, 80, 112) url("/assets/media/hero-img.jpg") no-repeat fixed;
+        background-size: 770px 1000px;
+        border-bottom-left-radius: 5rem;
+        border-bottom-right-radius: 5rem;
+    }
+    
+}
+
+@media only screen and (max-width: 375px) {
+    .hero-content {
+        height: 70vh;
+        background: rgb(53, 80, 112) url("/assets/media/hero-img.jpg") no-repeat fixed;
+        background-size: 700px 800px;
+        border-bottom-left-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+    }
+    .nav-link{
+        font-size: medium !important;
+        letter-spacing: 1px;
+    }
+    footer .social-icons {
+        display: flex;
+        justify-content: space-around;
+    }
+    .text-center .transaction-btn {
+        margin: 1rem;
+    }
+}
